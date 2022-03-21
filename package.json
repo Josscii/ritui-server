@@ -5,7 +5,7 @@
   "scripts": {
     "start:dev": "nodemon",
     "build": "npm install && rimraf ./build && tsc",
-    "start": "build && pm2 start build/app.js",
+    "start": "npm run build && pm2 start build/app.js",
     "stop": "pm2 stop app"
   },
   "keywords": [],
