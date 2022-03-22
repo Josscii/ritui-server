@@ -76,7 +76,7 @@ wapi.post("/audit", koaBody(), async (ctx) => {
 
   const user = await User.findByPk(daily.userId);
 
-  if (user) {
+  if (user && status == 2) {
     user.set("ban", 1);
     await user.save();
 
